@@ -1,0 +1,238 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: sans-serif;
+  background-color: rgb(239, 239, 239);
+  color: black;
+  padding: 20px;
+  min-width: 320px;
+}
+
+/* Заголовок */
+h1 {
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+/* Контейнер для картинки и цены — используем flex для выравнивания */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Для адаптации на мобильных */
+}
+
+/* Картинка слева */
+.image-container {
+  flex: 1;
+  max-width: 250px; /* Минимальная ширина для картинки */
+  max-width: 500px;
+  margin-left: 50px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Цена справа */
+.price-container {
+  flex: 0 0 auto; /* Не растягиваем контейнер цены */
+  text-align: right;
+  position: relative;
+  left: -9%;  /* Сдвиг влево на 150 px */
+  top: 150px;     /* Опускание вниз на 150 px */
+}
+
+h4 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  display: inline-block;
+}
+
+/* Кнопка под ценой */
+.button-container {
+  flex: 0 0 100%; /* Занимает всю ширину в обёртке */
+  text-align: right; /* Выравнивание кнопки по правому краю */
+  position: relative;
+  left: -80px;  /* Сдвиг влево на 150 px */
+  top: 60px;     /* Опускание вниз на 250 px */
+  margin-top: 20px;
+}
+
+button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #585858;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #3c3c3c;
+  transform: scale(1.05);
+}
+
+/* Остальные элементы */
+h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  margin-left: 5%;
+  font-weight: 800;
+}
+
+h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  margin-left: 6%;
+  font-weight: 800;
+}
+
+p {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 23px;
+  margin-left: 7%;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.text {
+  margin-bottom: 30px;
+}
+
+.text p {
+  margin-bottom: 10px;
+}
+
+/* Блок соцсетей */
+.socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 45px;
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.socials-container a {
+  background-color: white;
+  padding: 0.90em;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  text-decoration: none;
+  overflow: visible;
+  position: relative;
+}
+
+.socials-container a:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.socials-container a svg {
+  height: 32px;
+  width: 32px;
+  fill: #000000;
+  margin: 0;
+  display: block;
+  overflow: visible;
+}
+
+.socials-container a svg path {
+  fill: #000000;
+  stroke: none;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 1024px) {
+  .content-container {
+    gap: 20px;
+  }
+  
+  .image-container {
+    max-width: 80; /* Больше места на мобильных */
+    order: 1; /* Картинка первая */
+  }
+  
+  .price-container {
+    order: 2; /* Цена вторая */ /* По центру на мобильных */
+    left: 0; /* Убираем сдвиг влево на мобильных */
+    top: 0; /* Убираем смещение вниз на мобильных */
+  }
+  
+  .button-container {
+    order: 3; /* Кнопка третья */
+    text-align: center; /* По центру на мобильных */
+    left: 0; /* Убираем сдвиг влево на мобильных */
+    top: 0; /* Убираем смещение вниз на мобильных */
+    margin-top: 10px;
+  }
+  
+  button {
+    width: 70%; /* Кнопка занимает больше места */
+  }
+  
+  h1{
+    margin-left: 5%;
+  }
+  h3{
+    margin-left: 6%;
+  }
+  h4{
+    margin-right: 5%;
+  }
+  h2{
+    margin-left: 7%;
+  }
+  p{
+    margin-left: 8%;
+  }
+  .socials-container {
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .socials-container a {
+    height: 80px;
+    width: 80px;
+  }
+  
+  .socials-container a svg {
+    height: 24px;
+    width: 24px;
+  }
+}
