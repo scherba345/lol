@@ -184,7 +184,7 @@ p {
   }
   
   .image-container {
-    max-width: 80; /* Больше места на мобильных */
+    max-width: 90%; /* Больше места на мобильных */
     order: 1; /* Картинка первая */
   }
   
@@ -203,23 +203,23 @@ p {
   }
   
   button {
-    width: 70%; /* Кнопка занимает больше места */
+    width: 60%; /* Кнопка занимает больше места */
   }
   
   h1{
-    margin-left: 5%;
+    margin-left: 2%;
   }
   h3{
-    margin-left: 6%;
+    margin-left: 3%;
   }
   h4{
-    margin-right: 5%;
+    margin-right: 2%;
   }
   h2{
-    margin-left: 7%;
+    margin-left: 4%;
   }
   p{
-    margin-left: 8%;
+    margin-left: 5%;
   }
   .socials-container {
     gap: 30px;
